@@ -36,6 +36,21 @@
                 Pubblicato: {{ $project->published ? 'SI' : 'NO' }}
             </li>
             <li class="list-group-item">
+
+                Tipo:
+                @if (isset($project->type))
+                <a href="{{ route('admin.types.show', ['type' => $project->type_id]) }}">
+
+                    {{ $project->type->name }}
+                </a>
+
+                @else
+                -
+                @endif
+
+
+            </li>
+            <li class="list-group-item">
                 Data di creazione: {{ $project->creation_date }}
             </li>
 

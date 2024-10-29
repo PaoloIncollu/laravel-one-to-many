@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Project;
+use App\Models\Type;
 class ProjectSeeder extends Seeder
 {
     /**
@@ -19,6 +20,12 @@ class ProjectSeeder extends Seeder
             $name = fake()->sentence(3);
             $slug = str()->slug($name);
 
+            /* Prendo una categoria casuale dal db */
+            $randomTypeId = null;
+            $randomType = Type::inRandomOrder()->first();
+            $randomTypeId = $randomType->id;
+
+
             Project::create([
 
             'name'=> $name,
@@ -26,7 +33,8 @@ class ProjectSeeder extends Seeder
             'description' => fake()->paragraph(),
             'content'=> fake()->paragraph(),
             'creation_date' => fake()->dateTimeBetween('-5 years', 'now'),
-            'published'=> fake()->boolean(70)
+            'published'=> fake()->boolean(70),
+            'type_id' => $randomTypeId
 
             ]);
 

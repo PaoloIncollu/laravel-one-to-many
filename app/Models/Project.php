@@ -15,7 +15,12 @@ class Project extends Model
         'description',
         'content',
         'creation_date',
-        'published'
-
+        'published',
+        
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Type::class);
+    }
 }

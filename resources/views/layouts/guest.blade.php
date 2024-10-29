@@ -28,7 +28,7 @@
                                     <a class="nav-link" href="{{ route('admin.projects.index') }}">Progetti</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Link 3</a>
+                                    <a class="nav-link" href="{{ route('admin.types.index') }}">Tipi</a>
                                 </li>
                             @else
                                 <li class="nav-item">

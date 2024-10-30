@@ -50,7 +50,7 @@
 
                              @if ($type->projects()->count() > 0)
                                 <ul>
-                                    @foreach ($type->project as $project)
+                                    @foreach ($type->projects as $project)
                                         <li>
                                             <a href="{{ route('admin.projects.show', ['project' => $project->id]) }}">
                                                 {{ $project->name }}

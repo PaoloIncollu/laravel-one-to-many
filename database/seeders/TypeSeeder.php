@@ -24,13 +24,13 @@ class TypeSeeder extends Seeder
         });
 
         $allTypes = [
-            'HTML',
-            'CSS',
-            'Java Script',
-            'Vue',
-            'SQL',
-            'PHP',
-            'Laravel'
+            'E-commerce',
+            'Corporate',
+            'Portfolio',
+            'Blog',
+            'No-Profit',
+            'Educational',
+            'Personal'
         ];
 
         foreach ($allTypes as $singletype) {

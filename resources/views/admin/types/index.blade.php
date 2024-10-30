@@ -42,7 +42,7 @@
                                     <td class="text-center">
 
                                         <div>
-                                            {{ count($type->projects) }}
+                                            {{ $type->project()->count() }}
                                         </div>
                                     </td>
                                     <td class="text-center">

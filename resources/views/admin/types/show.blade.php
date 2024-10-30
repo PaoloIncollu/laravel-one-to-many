@@ -48,9 +48,9 @@
                         <li>
                             Post collegati:
 
-                            @if ($type->posts()->count() > 0)
+                             @if ($type->project()->count() > 0)
                                 <ul>
-                                    @foreach ($type->projects as $project)
+                                    @foreach ($type->project as $project)
                                         <li>
                                             <a href="{{ route('admin.projects.show', ['project' => $project->id]) }}">
                                                 {{ $project->name }}
